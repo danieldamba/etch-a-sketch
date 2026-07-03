@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.container {
+    width: 1000px;
+    display: flex;
+    gap: 2px;
+    flex-flow: row wrap;
+}
+
+.container div {
+    width: 25px;
+    height: 25px; /* 25px; */
+    background-color: blue;
+}
