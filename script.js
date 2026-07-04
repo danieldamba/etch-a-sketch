@@ -52,6 +52,24 @@ button.addEventListener(`click`, () => {
 
 divContainer.addEventListener(`mouseover`, (e) => {
     if (e.target.classList.contains(`box`)) {
-        e.target.style.backgroundColor = `black`;
+        e.target.style.backgroundColor = randomColor();
+
+        if (e.target.style.opacity === ``) {
+            e.target.style.opacity = 1;
+        } 
+        else {
+            let currentOpacity = parseFloat(e.target.style.opacity);
+            if (currentOpacity <= 1) {
+                e.target.style.opacity = currentOpacity - 0.1;
+            }
+        }
+
     }
 });
+
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}

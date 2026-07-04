@@ -10,3 +10,4 @@ i.e for:
 
 ## Features 
 
+I added a hover effect to the grid, so that when you hover over a square, it changes color.
